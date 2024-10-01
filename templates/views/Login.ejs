@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #2e2e2e); /* Updated gradient background */
+            font-family: 'Arial', sans-serif;
+            color: #f39c12; /* Updated text color */
+            display: flex;
+            flex-direction: column; /* Column layout to stack elements */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent background for form */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%; /* Full width on smaller screens */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px; /* Slightly larger font size */
+            letter-spacing: 1px; /* Added letter spacing for aesthetics */
+            color: #f39c12; /* Updated heading color */
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+            color: #f39c12; /* Updated input text color */
+            font-size: 16px; /* Increased font size */
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Lighter placeholder color */
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #f39c12; /* Orange border on focus */
+            background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter background */
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #f39c12; /* Orange button */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+            margin-top: 10px; /* Space before the button */
+        }
+
+        button:hover {
+            background-color: #e67e22; /* Lighter orange on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+
+        p {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #f39c12; /* Updated link color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #e67e22; /* Lighter orange on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .info-section {
+            display: flex; /* Flexbox for card layout */
+            flex-wrap: wrap; /* Allow cards to wrap to the next line */
+            justify-content: center; /* Center cards horizontally */
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent background for cards */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px; /* Space between cards */
+            width: 150px; /* Fixed width for cards */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center; /* Center text in cards */
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px; /* Smaller font size for card headings */
+            color: #f39c12; /* Updated card heading color */
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 12px; /* Smaller font size for card text */
+            line-height: 1.5; 
+            color: #f39c12; /* Updated card text color */
+        }
+
+        @media (max-width: 500px) {
+            form {
+                padding: 30px; /* Reduce padding on small screens */
+            }
+
+            h2 {
+                font-size: 24px; /* Smaller font size on mobile */
+            }
+
+            .card {
+                width: 130px; /* Adjust card width for mobile */
+            }
+
+            .card h3 {
+                font-size: 16px; /* Smaller header font size */
+            }
+
+            .card p {
+                font-size: 10px; /* Smaller text size for cards */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/userlogin" method="POST">
+        <h2>Login</h2>
+        <input type="email" name="email" required placeholder="Email">
+        <input type="password" name="password" required placeholder="Password">
+        <button type="submit">Login</button>
+        <p>
+            <a href="/register">Don't have an account? Register</a>
+        </p>
+    </form>
+
+    <div class="info-section">
+        <div class="card">
+            <h3>Founded On:</h3>
+            <p>October 1, 2024</p>
+        </div>
+        <div class="card">
+            <h3>Founded By:</h3>
+            <p>Zubair</p>
+        </div>
+        <div class="card">
+            <h3>Our Aim:</h3>
+            <p>Seamless online experience</p>
+        </div>
+        <div class="card">
+            <h3>About This Site:</h3>
+            <p>Enhancing user engagement</p>
+        </div>
+    </div>
+
+</body>
+</html>
